@@ -1,0 +1,159 @@
+// compress: true
+
+@import "vars.less";
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+    color: @black;
+
+    background-color: @background;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    margin: 180px auto 0;
+}
+
+.timer {
+    margin: auto;
+    margin-bottom: 3rem;
+    padding: 4rem;
+
+    background-color: @white;
+    border-radius: 16px;
+    box-shadow: 0 8px 12px 8px rgba(@black, .4);
+}
+
+.timer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer__item {
+    margin-right: 3rem;
+
+    text-align: center;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.title {
+    margin-bottom: 1.2rem;
+
+    text-transform: uppercase;
+}
+
+.timer-time__square {
+    display: flex;
+
+    width: 150px;
+    height: 150px;
+
+    background: linear-gradient(to bottom, @primary, @white, @primary);
+    border-radius: 6px;
+    box-shadow: 0 0 4px 1px rgba(@black, .6);
+}
+
+.time {
+    margin: auto;
+    
+    font-size: 8rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.timer__action {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+
+    margin-right: 3rem;
+    padding: 12px 25px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+
+    background-color: @btn;
+    border: none;
+    border-radius: 6px;
+    box-shadow: -2px 2px 3px rgba(@black, .6);
+
+    transition: background-color .15s linear, box-shadow .2s linear, transform .2s linear, opacity .2s linear;
+
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:hover {
+        background-color: rgba(@btn, .6);
+    }
+
+    &:active {
+        box-shadow: none;
+        transform: translate(-2px, 2px);
+    }
+}
+
+.noActive {
+    opacity: .5;
+    box-shadow: none;
+    transform: translate(-2px, 2px);
+
+    cursor: auto;
+
+    &:hover {
+        background-color: @btn;
+    }
+}
+
+.btn__img {
+    position: relative;
+
+    display: flex;
+}
+
+.btn__ico {
+    height: 20px;
+    margin-right: 10px;
+
+    transition: transform .3s linear;
+}
+
+.ico-no__active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    transform: scale(0);
+}
+

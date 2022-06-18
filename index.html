@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Timer</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="timer">
+            <div class="timer__inner">
+                <div class="timer__item">
+                    <div class="title">Minutes</div>
+
+                    <div class="timer-time__square">
+                        <div class="time minute">00</div>
+                    </div>
+                </div>
+
+                <div class="timer__item">
+                    <div class="title">Seconds</div>
+
+                    <div class="timer-time__square">
+                        <div class="time second">00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timer__action">
+            <button class="btn start">
+                <div class="btn__img">
+                    <img src="img/play_ico.png" alt="" class="btn__ico  ico__play">
+                    <img src="img/stop_ico.png" alt="" class="btn__ico  ico__stop  ico-no__active">
+                </div>
+                Start / Stop
+            </button>
+
+            <button class="btn wait">
+                <div class="btn__img">
+                    <img src="img/pause_ico.png" alt="" class="btn__ico  ico__play">
+                </div>
+                Wait
+            </button>
+
+            <button class="btn reset">
+                <div class="btn__img">
+                    <img src="img/reset_ico.png" alt="" class="btn__ico  ico__play">
+                </div>
+                Reset
+            </button>
+        </div>
+    </div>
+    
+
+    <script src="app/app.js"></script>
+</body>
+
+</html>
